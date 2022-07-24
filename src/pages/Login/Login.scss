@@ -1,0 +1,80 @@
+@import '../common.scss';
+
+.back-login {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(238, 238, 238, 0.475);
+}
+
+.error {
+	color: red;
+}
+
+.second {
+	position: relative;
+
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.forgot {
+	color: blue;
+	font-size: small;
+	cursor: pointer;
+}
+.container-login-footer {
+	height: 10vh;
+	width: 100vw;
+	position: fixed;
+	left: 0%;
+	top: 93%;
+	transform: translate(0%, -90%);
+	z-index: 1000;
+
+	text-transform: uppercase;
+
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.get-the-app {
+	height: 15vh;
+	width: 100vw;
+	position: fixed;
+	left: 0%;
+	top: 78%;
+	transform: translate(0%, -78%);
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.badge {
+	height: 5rem;
+}
+.footer-nav ul li {
+	margin-right: 1.6rem;
+}
+
+.footer-nav ul li a {
+	color: #003569;
+}
+
+.copyright-notice {
+	color: #999999;
+}

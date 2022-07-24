@@ -1,0 +1,44 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 8vh;
+  box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rest {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 1.15rem;
+
+  color: rgba(0, 0, 0, 0.875);
+}
+.enclose {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+.enclose:hover {
+  transform: translateY(-0.07rem);
+}
+.hide {
+  display: none;
+}

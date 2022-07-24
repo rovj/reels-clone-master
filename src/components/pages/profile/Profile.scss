@@ -1,0 +1,60 @@
+.profile-container {
+	height: fit-content;
+	min-height: 92vh !important;
+	width: 80% !important;
+	min-width: 300px !important;
+
+	margin: 0 auto !important;
+	margin-top: 8vh !important;
+	padding: 40px;
+}
+
+.profile-image > img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile-content-container {
+	padding: 10px;
+	gap: 20px;
+}
+
+.profile-content {
+	gap: 0.25rem;
+	padding: 0.5rem 0;
+	align-items: center;
+}
+
+.profile-stats {
+	padding: 1rem 0;
+	@media screen and (max-width: 400px) {
+		padding: 0.5rem 0;
+	}
+	& > div {
+		padding: 0 0.5rem;
+	}
+	margin-top: -20px;
+}
+
+.profile-posts {
+	gap: 40px;
+}
+
+.profile-videos {
+	height: 350px;
+	width: 100%;
+}
+
+.progressbar {
+	margin-bottom: 20px;
+}
+
+.followers {
+	cursor: pointer;
+}
+
+.following {
+	cursor: pointer;
+}

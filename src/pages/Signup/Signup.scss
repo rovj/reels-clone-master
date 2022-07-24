@@ -1,0 +1,25 @@
+@import '../common.scss';
+
+.hidden {
+	display: none;
+}
+
+.select {
+	color: #3897f0;
+	cursor: pointer;
+	width: 90%;
+	padding: 0.5rem 1rem;
+	width: 100%;
+	border: 2px solid #3897f0;
+	border-radius: 10px;
+	height: auto !important;
+}
+
+.bold-text {
+	font-weight: bold;
+	color: grey;
+	padding-bottom: 0.5rem;
+}
+.small {
+	font-size: small;
+}

@@ -1,0 +1,129 @@
+.comments {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.post-area {
+	position: absolute;
+	bottom: 0.056rem;
+	background-color: white;
+	width: 99%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 0.1px solid rgba(128, 128, 128, 0.581);
+	.post-area-inner {
+		padding: 0 1rem;
+		width: calc(100% - 2rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.post-text {
+	border-radius: 10px;
+	scrollbar-width: none;
+	background-color: #ebedf080;
+	border: none;
+	outline: none;
+	border: 0.5rem solid #ebedf080;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	resize: none;
+	color: gray;
+}
+.opacity {
+	opacity: 1;
+}
+.less-opacity {
+	opacity: 0.5;
+}
+.post-text::-webkit-scrollbar {
+	display: none;
+}
+.post-button {
+	margin-left: 2rem;
+	background-color: #0095f6;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	font-weight: 600;
+}
+.post-button-text {
+	padding: 0.25rem 0.5rem;
+	color: white;
+}
+.comment-area {
+	height: 80%;
+	width: 95%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: none;
+	position: relative;
+	padding: 0.8rem;
+}
+.comment-area::-webkit-scrollbar {
+	display: none;
+}
+.comment {
+	display: flex;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-shrink: 0;
+	margin-bottom: 0.5rem;
+	padding: 0px;
+}
+.comment-text {
+	position: relative;
+	overflow-x: scroll;
+	text-align: left;
+	scrollbar-width: 0;
+}
+.comment-text::-webkit-scrollbar {
+	display: none;
+}
+
+.comment-img {
+	width: 25%;
+	flex-shrink: 0;
+}
+.post-pic {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+	margin-top: 0.8rem;
+	margin-left: 1.6rem;
+}
+.top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	height: 10%;
+	width: 100%;
+	border-bottom: 0.1px solid rgba(128, 128, 128, 0.581);
+}
+.stripe-container {
+	margin-top: 0.6rem;
+	margin-left: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+	position: relative;
+}
+.temp-text {
+	font-size: small;
+	color: black;
+	position: relative;
+	bottom: 1rem;
+}

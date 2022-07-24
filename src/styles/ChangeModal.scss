@@ -1,0 +1,190 @@
+.close {
+	color: white;
+	position: fixed;
+	top: 1.4%;
+	right: 1.7%;
+	z-index: 1000;
+	font-size: 1rem;
+}
+.back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-modal-change {
+	padding: 1rem;
+	position: relative;
+	/* top: 50%; */
+	/* left: 50%; */
+	/* transform: translate(-50%, -50%); */
+	background-color: white;
+	z-index: 1000;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.edit-update {
+	padding: 1rem 0;
+}
+
+/* .small-modal {
+	height: 40vh;
+}
+
+.large-modal {
+	height: 60vh;
+} */
+
+.edit-menu {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.edit-menu-item {
+	font-size: large;
+	border-bottom: 0.5px solid grey;
+	width: 100%;
+
+	padding: 0.5rem 1rem;
+
+	color: grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.edit-menu-item:hover {
+	color: black;
+}
+
+.cancel-item {
+	color: rgb(245, 131, 131);
+	border: none;
+}
+
+.cancel-item:hover {
+	color: red;
+}
+
+.update-name {
+	height: 100%;
+	width: 100%;
+}
+
+.modal-title {
+	width: 100%;
+	display: flex;
+	padding: 0.5rem 0 1rem;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid grey;
+}
+
+.modal-content {
+	margin: 0;
+	padding: 1rem 0rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	p {
+		b {
+			font-weight: normal;
+		}
+	}
+}
+
+.update-name-content {
+	padding: 0.5rem 0;
+}
+
+.update-name-title {
+	height: 25%;
+}
+
+.update-name-footer {
+	padding: 1rem 0 0.5rem;
+}
+
+.update-email-content {
+	gap: 10%;
+	height: 60%;
+}
+
+.update-email-title {
+	height: 20%;
+}
+
+.update-email-footer {
+	padding: 1rem 0 0.5rem;
+}
+
+.modal-footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 1px solid grey;
+}
+
+.modal-footer-button {
+	height: 30px;
+	width: 65px;
+	background-color: #0095f6;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	color: white;
+}
+
+.update-password {
+	height: 100%;
+	width: 100%;
+}
+
+.update-password-title {
+	height: 15%;
+}
+
+.update-password-content {
+	height: 70%;
+	gap: 8%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.update-password-footer {
+	padding: 1rem 0 0.5rem;
+}
+
+input {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid #dbdbdb;
+	border-radius: 0.25rem;
+	width: 100%;
+	min-width: 200px;
+	margin: 0 auto;
+	display: initial;
+	margin-bottom: 1rem;
+	&:focus {
+		outline: none;
+		border: 1px solid gray;
+		background-color: rgba(238, 238, 238, 0.6);
+	}
+}
