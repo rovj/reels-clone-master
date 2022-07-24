@@ -15,7 +15,7 @@ import { Paper, ThemeProvider } from "@mui/material";
 import { darkTheme, lightTheme } from "./theme/Themes";
 
 const App = () => {
-  let location = window.location.pathname;
+  
   let contextObj = useContext(AuthContext);
   let theme = contextObj.theme;
   return (
