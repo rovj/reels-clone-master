@@ -53,11 +53,11 @@ const Posts = ({ user }) => {
   }, [posts]);
   useEffect(() => {
     let userArr = [];
-    contextObj.userList.forEach((listItem)=>{
-      if(!listItem.followers.includes(contextObj.user.docId)){
+    contextObj.userList.forEach((listItem) => {
+      if (!listItem.followers.includes(contextObj.user.docId)) {
         userArr.push(listItem);
       }
-    })
+    });
     setUserList(userArr.slice(0, 5));
   }, [contextObj.userList]);
   useEffect(() => {
@@ -108,16 +108,15 @@ const Posts = ({ user }) => {
     };
   }, [posts, user]);
 
-  const displayPosts = posts
-    ?.filter((post) => {
-      return (
-        (contextObj.user.following.includes(post.userId) ||
-          contextObj.user.docId === post.userId) &&
-        (seenPosts[post.postId]
-          ? !seenPosts[post.postId].includes(contextObj.user.docId)
-          : true)
-      );
-    })
+  const displayPosts = posts?.filter((post) => {
+    return (
+      (contextObj.user.following.includes(post.userId) ||
+        contextObj.user.docId === post.userId) &&
+      (seenPosts[post.postId]
+        ? !seenPosts[post.postId].includes(contextObj.user.docId)
+        : true)
+    );
+  });
   return (
     <>
       {posts === null || user === null || seenPosts === null ? (
@@ -152,26 +151,28 @@ const Posts = ({ user }) => {
                 </svg>
               </div>
             ) : (
-              userList.slice(0, 5).map((user, index) => {
-                return (
-                  <div
-                    className="posts"
-                    key={index}
-                    onClick={() => handleVisit(user)}
-                  >
-                    <div className="posts-wrapper">
-                      <div className="">
-                        <img
-                          src={user?.profileUrl}
-                          alt=""
-                          className="user-image"
-                        />
+              <div className="suggested-posts-container">
+                {userList.slice(0, 5).map((user, index) => {
+                  return (
+                    <div
+                      className="posts"
+                      key={index}
+                      onClick={() => handleVisit(user)}
+                    >
+                      <div className="posts-wrapper">
+                        <div className="">
+                          <img
+                            src={user?.profileUrl}
+                            alt=""
+                            className="user-image"
+                          />
+                        </div>
+                        <div className="">{user.fullname}</div>
                       </div>
-                      <div className="">{user.fullname}</div>
                     </div>
-                  </div>
-                );
-              })
+                  );
+                })}
+              </div>
             )}
           </div>
           <div className="video-user-container">
@@ -234,30 +235,35 @@ const Posts = ({ user }) => {
                   );
                 })}
               </div>
-            ) : (!displayPosts || displayPosts?.length === 0) && (
-				<>
-				  <div
-					style={{ padding: "20px 0" }}
-					className={
-					  (contextObj.theme === "dark" ? "dark " : "") + "feed-no-post"
-					}
-				  >
-					<div className="inner">
-					  <img
-						className="display-image"
-						src={noPosts}
-						width={200}
-						alt=""
-						srcset=""
-					  />
-					</div>
-					<div className="inner p">No posts yet.</div>
-				  </div>
-				</>
-			  )}
+            ) : (
+              (!displayPosts || displayPosts?.length === 0) && (
+                <>
+                  <div
+                    style={{ padding: "20px 0" }}
+                    className={
+                      (contextObj.theme === "dark" ? "dark " : "") +
+                      "feed-no-post"
+                    }
+                  >
+                    <div className="inner">
+                      <img
+                        className="display-image"
+                        src={noPosts}
+                        width={200}
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                    <div className="inner p">No posts yet.</div>
+                  </div>
+                </>
+              )
+            )}
 
             <div className="video-right-container">
-			  <div className="suggested-users-heading"><b>Suggested Users</b></div>
+              <div className="suggested-users-heading">
+                <b>Suggested Users</b>
+              </div>
               {userList.slice(0, 5).map((user, index) => {
                 let nameArr = user.fullname.split(" ");
                 let tempUserName = "";
@@ -280,14 +286,15 @@ const Posts = ({ user }) => {
                         />
                       </div>
                       <div className="suggested-users-details">
-						<p><b>{user.fullname}</b></p>
-						<p>{tempUserName}</p>
-					  </div>
+                        <p>
+                          <b>{user.fullname}</b>
+                        </p>
+                        <p>{tempUserName}</p>
+                      </div>
 
-					  <div className="suggested-users-view">
-						<button>View</button>
-					  </div>
-
+                      <div className="suggested-users-view">
+                        <button>View</button>
+                      </div>
                     </div>
                   </div>
                 );
@@ -296,7 +303,6 @@ const Posts = ({ user }) => {
           </div>
         </div>
       )}
-      
     </>
   );
 };
